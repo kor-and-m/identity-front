@@ -1,0 +1,9 @@
+<div class="auth-form">
+    <div class="auth-header container-fluid" *ngIf="(path_state | async) !== '/auth/after-reg'">
+    	<div class="row">
+    		<div class="col-6" routerLinkActive="active" routerLink="login">Войти</div>
+    		<div class="col-6" routerLinkActive="active" routerLink="registration">Зарегистрироваться</div>
+    	</div>
+    </div>
+	<router-outlet></router-outlet>
+</div>
