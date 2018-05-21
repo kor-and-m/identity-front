@@ -16,8 +16,6 @@ export class RegistrationComponent implements OnInit {
   public password: FormControl;
   public password_again: FormControl;
 
-  public user: {scope_name: string, back_url: string};
-
   constructor(
   	private userService: UserService,
   	private router: Router,
@@ -25,7 +23,6 @@ export class RegistrationComponent implements OnInit {
     this.password = new FormControl('', [Validators.required]);
     this.password_again = new FormControl('', [Validators.required]);
     this.email = new FormControl('', [Validators.required, Validators.email]);
-  	this.user = {scope_name: 'chat', back_url: '/auth/registration'};
   }
 
   ngOnInit() {
@@ -49,10 +46,10 @@ export class RegistrationComponent implements OnInit {
       console.error('пароли не совподают');
     }
     else{
-      this.userService.registration(Object.assign(this.user, {
+      this.userService.registration({
         email: this.email.value,
         password: this.password.value,
-      })).subscribe(
+      }).subscribe(
         (data) => console.log(data),
         (err) => console.error(err)
       );

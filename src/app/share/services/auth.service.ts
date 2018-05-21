@@ -9,11 +9,6 @@ import { iSession } from '../interfaces/session';
 interface loginParams {
   "email": string;
   "password": string,
-  "scope_name": string,
-}
-
-interface registrationParams extends loginParams {
-  "back_url": string;
 }
 
 @Injectable()
@@ -31,7 +26,7 @@ export class UserService {
                     .map(response => response.json());
   }
 
-  public registration(user: registrationParams): Observable<any> {
+  public registration(user: loginParams): Observable<any> {
     const body = JSON.stringify(user);
     const headers = new Headers({
      'Content-Type': 'application/json',

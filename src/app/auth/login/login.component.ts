@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
   	this.userService.login({
       email: this.email.value,
       password: this.password.value,
-      scope_name: 'chat',
     }).subscribe(
   	  (data) => this.setAuthCookie(data),
   	  (err) => this.loading = false
