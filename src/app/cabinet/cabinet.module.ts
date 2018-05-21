@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MatCardModule, MatButtonModule, MatBadgeModule } from '@angular/material';
+import { MatCardModule, MatButtonModule, MatBadgeModule, MatTabsModule } from '@angular/material';
 import { CookieService } from 'ngx-cookie-service';
 
 import { AuthGuard } from './../share/guards/auth.guard';
@@ -37,6 +37,7 @@ import { UbdateScopeComponent } from './ubdate-scope/ubdate-scope.component';
     MatCardModule,
     MatButtonModule,
     MatBadgeModule,
+    MatTabsModule,
   ],
   providers: [UserService, AuthGuard, ScopeService],
 })
