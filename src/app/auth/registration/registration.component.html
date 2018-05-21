@@ -13,8 +13,8 @@
   </div>
   <div class="form-group login-input">
     <mat-form-field>
-      <input matInput placeholder="Повторите пароль" type="password" [formControl]="password" required>
-      <mat-error *ngIf="password.invalid">{{ getErrorPasswordAgain() }}</mat-error>
+      <input matInput placeholder="Повторите пароль" type="password" [formControl]="password_again" required>
+      <mat-error *ngIf="password_again.invalid">{{ getErrorPasswordAgain() }}</mat-error>
     </mat-form-field>
   </div>
   <button mat-button type="submit">Отправить</button>
