@@ -1,4 +1,6 @@
-<mat-tab-group>
-  <mat-tab label="редактирование"></mat-tab>
-  <mat-tab label="Просмотр"></mat-tab>
-</mat-tab-group>
+<div class="container">
+  <mat-tab-group>
+    <mat-tab label="редактирование" *ngIf="action !== 'watch'"></mat-tab>
+    <mat-tab label="Просмотр"></mat-tab>
+  </mat-tab-group>
+</div>
