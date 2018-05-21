@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
   	const payload = JSON.parse(atob(jwt.split('.')[1]));
   	const exp: number = +payload['exp'];
   	const date = new Date(exp*1000);
-  	this.cookieService.set('AUTH_COOKIE', jwt, date);
+  	this.cookieService.set('AUTH_COOKIE', jwt, date, '/');
   	this.router.navigate(['/apps']);
   }
 

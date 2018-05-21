@@ -4,7 +4,7 @@ import { Headers, Http, URLSearchParams, RequestOptions } from '@angular/http';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { iSession } from '../interfaceses/session';
+import { iSession } from '../interfaces/session';
 
 interface loginParams {
   "email": string;
@@ -27,7 +27,7 @@ export class UserService {
      'Content-Type': 'application/json',
     });
     const options = new RequestOptions({ headers: headers, withCredentials: true });
-    return this.http.post('http://82.146.43.125/api/auth/login/', body, options)
+    return this.http.post('/api/auth/login/', body, options)
                     .map(response => response.json());
   }
 
@@ -37,11 +37,11 @@ export class UserService {
      'Content-Type': 'application/json',
     });
     const options = new RequestOptions({ headers: headers, withCredentials: true });
-    return this.http.post('http://82.146.43.125/api/auth/registration/', body, options);
+    return this.http.post('/api/auth/registration/', body, options);
   }
 
   public logout(): void {
-    this.cookieService.delete('AUTH_COOKIE');
+    this.cookieService.delete('AUTH_COOKIE', '/');
   }
 
   public get_session(): iSession {

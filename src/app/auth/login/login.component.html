@@ -11,6 +11,6 @@
       <mat-error *ngIf="password.invalid">{{ getErrorPassword() }}</mat-error>
     </mat-form-field>
   </div>
-  <button type="submit" class="btn btn-primary">Отправить</button>
+  <button mat-button type="submit">Отправить</button>
 </form>
 <mat-spinner *ngIf="loading"></mat-spinner>

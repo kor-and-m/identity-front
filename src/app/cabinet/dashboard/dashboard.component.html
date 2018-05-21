@@ -1,10 +1,9 @@
-<div class="col-4 app-container">
-  <mat-card>
-    <mat-card-title>Игра в дурака</mat-card-title>
-    <mat-card-subtitle>От производителя: Вася</mat-card-subtitle>
-    <mat-card-content>
-    	Игра в дурака с блекджеком и шлюхами
-    </mat-card-content>
-    <img mat-card-image src="assets/apps/default.png">
-  </mat-card>
+<div class="container-fluid">
+  <div class="row">
+    <ng-template ngFor let-scope [ngForOf]="scopes">
+      <div class="col-4 app-container">
+        <app-scope-card [scope]="scope"></app-scope-card>
+      </div>
+    </ng-template>
+  </div>
 </div>

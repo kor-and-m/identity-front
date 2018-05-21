@@ -5,10 +5,15 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="catalog">Каталог</a>
+        <a [matBadge]="scopes_all" matBadgeOverlap="false" 
+        class="nav-link" routerLinkActive="active" routerLink="catalog">Каталог</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="management">Мои приложения</a>
+        <a [matBadge]="scopes_my" matBadgeOverlap="false"
+        class="nav-link" routerLinkActive="active" routerLink="management">Управление приложениями</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="create">Создание приложения</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" routerLink="about">Как это работает?</a>

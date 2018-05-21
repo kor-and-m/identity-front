@@ -3,7 +3,12 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MatFormFieldModule, MatInputModule, MatProgressSpinnerModule } from '@angular/material';
+import { 
+  MatFormFieldModule,
+  MatInputModule,
+  MatProgressSpinnerModule,
+  MatButtonModule,
+} from '@angular/material';
 
 import { AuthGuard } from './../share/guards/auth.guard';
 import { UserService } from './../share/services/auth.service';
@@ -29,6 +34,7 @@ import { LayoutComponent } from './layout/layout.component';
     ReactiveFormsModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    MatButtonModule,
   ],
   providers: [UserService, AuthGuard],
 })

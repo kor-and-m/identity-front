@@ -1,6 +1,15 @@
-<div class="col-4 app-container">
-  <mat-card>
-    <mat-card-title>Создать приложение</mat-card-title>
-    <img mat-card-image src="assets/apps/add.png">
-  </mat-card>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4 app-container" [routerLink]="['/apps', 'create']">
+      <mat-card>
+        <mat-card-title>Создать приложение</mat-card-title>
+        <img mat-card-image src="assets/apps/add.png">
+      </mat-card>
+    </div>
+    <ng-template ngFor let-scope [ngForOf]="scopes">
+      <div class="col-4 app-container">
+        <app-scope-card [scope]="scope"></app-scope-card>
+      </div>
+    </ng-template>
+  </div>
 </div>

@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-title>{{ scope.title }}</mat-card-title>
+  <mat-card-subtitle>От производителя: {{ scope.author.email }}</mat-card-subtitle>
+  <mat-card-content *ngIf="scope?.description">
+    <div [innerHTML]="scope.description"></div>
+  </mat-card-content>
+  <img mat-card-image [src]="scope?.icon || 'assets/apps/default.png'">
+  <div class="button-row">
+    <a mat-fab [routerLink]="scope.name" color="primary">Инфо</a>
+    <a mat-fab color="primary" class="enter-button"
+    [attr.href]="'/api/auth/set-token/?scope_name='+scope.name">Войти</a>
+  </div>
+</mat-card>
