@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-ubdate-scope',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UbdateScopeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+  	console.log(this.route);
   }
 
 }
