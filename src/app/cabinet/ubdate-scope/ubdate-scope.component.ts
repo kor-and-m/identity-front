@@ -11,7 +11,7 @@ export class UbdateScopeComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-  	this.route.params.subscribe((data) => console.log(data));
+  	this.route.data.subscribe((data) => console.log(data));
   }
 
 }
