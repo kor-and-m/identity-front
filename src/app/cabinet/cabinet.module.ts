@@ -18,7 +18,6 @@ import { AboutComponent } from './about/about.component';
 import { AboutApiComponent } from './about-api/about-api.component';
 import { ScopeCardComponent } from './scope-card/scope-card.component';
 import { UbdateScopeComponent } from './ubdate-scope/ubdate-scope.component';
-import { MatFileUploadModule } from 'angular-material-fileupload';
 
 
 @NgModule({
@@ -33,7 +32,6 @@ import { MatFileUploadModule } from 'angular-material-fileupload';
   ],
   imports: [
     CommonModule,
-    MatFileUploadModule,
     RouterModule.forChild(appRoutes),
     HttpModule,
     FormsModule,
