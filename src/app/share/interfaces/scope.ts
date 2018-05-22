@@ -8,10 +8,11 @@ interface iScopeStyles {
 
 export interface iScope {
   styles?: iScopeStyles,
-  author: iUser,
+  author?: iUser,
   name?: string,
   title: string,
   description?: string,
   back_url: string,
   icon: string,
+  secret?: string,
 }

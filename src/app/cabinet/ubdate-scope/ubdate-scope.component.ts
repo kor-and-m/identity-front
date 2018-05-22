@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-interface iScopeCreate {
-  back_url: string,
-  description: string,
-  icon: File,
-  title: string,
-}
+import { iScope } from '../../share/interfaces/scope';
+
 
 @Component({
   selector: 'app-ubdate-scope',
@@ -16,9 +12,16 @@ interface iScopeCreate {
 export class UbdateScopeComponent implements OnInit {
 
   public action: 'create' | 'update' | 'watch';
+  public scope: iScope;
 
   constructor(private route: ActivatedRoute) {
   	this.action = 'create';
+  	this.scope = {
+  	  title: '',
+  	  description: '',
+  	  back_url: '',
+  	  icon: '',
+  	};
   }
 
   ngOnInit() {
