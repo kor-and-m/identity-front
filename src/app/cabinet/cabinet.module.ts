@@ -18,6 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { AboutApiComponent } from './about-api/about-api.component';
 import { ScopeCardComponent } from './scope-card/scope-card.component';
 import { UbdateScopeComponent } from './ubdate-scope/ubdate-scope.component';
+import { EditorModule } from 'primeng/editor';
 
 
 @NgModule({
