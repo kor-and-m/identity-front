@@ -40,6 +40,7 @@ import { EditorModule } from 'primeng/editor';
     MatButtonModule,
     MatBadgeModule,
     MatTabsModule,
+    EditorModule,
   ],
   providers: [UserService, AuthGuard, ScopeService],
 })
