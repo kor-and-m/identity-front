@@ -80,5 +80,5 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  */
 
 import 'hammerjs';
-import 'quill';
+import 'quill/dist/quill';
 
