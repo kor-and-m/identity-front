@@ -9,11 +9,12 @@
           <input matInput placeholder="Адрес авторизации" name="back_url" [(ngModel)]="scope.back_url">
         </mat-form-field>
         <div>
-          <p-editor [(ngModel)]="scope.description" [style]="{'height':'320px'}" name="editor"></p-editor>
+          <p-editor [placeholder]="'Описание приложения'" [(ngModel)]="scope.description" 
+          [style]="{'height':'320px'}" name="editor"></p-editor>
         </div>
+        <button mat-raised-button color="primary" type="submit">Отправить</button>
       </form>
     </mat-tab>
-    <mat-tab label="Просмотр" *ngIf="action !== 'create'">	
-    </mat-tab>
+    <mat-tab label="Просмотр" *ngIf="action !== 'create'"></mat-tab>
   </mat-tab-group>
 </div>
