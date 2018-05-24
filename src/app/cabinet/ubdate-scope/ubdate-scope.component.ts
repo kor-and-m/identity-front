@@ -25,8 +25,8 @@ export class UbdateScopeComponent implements OnInit {
       this.action = data['action'];
       if (this.action !== 'create') {
         this.route.params.subscribe((params) => {
-          if (params['id']){
-            this.scopeService.get_scope(params['id']).subscribe((scope) => this.scope = scope);
+          if (params.get('id')){
+            this.scopeService.get_scope(params.get('id')).subscribe((scope) => this.scope = scope);
           }
         });
       }
