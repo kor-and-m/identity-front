@@ -1,6 +1,6 @@
 <div class="container scope-form">
   <mat-tab-group>
-    <mat-tab label="Просмотр" *ngIf="action !== 'create'">
+    <mat-tab label="Просмотр" *ngIf="action !== 'create' && scope.name">
       <app-scope-card [scope]="scope" [hide_description]=false></app-scope-card>
     </mat-tab>
     <mat-tab label="Редактирование" *ngIf="action !== 'watch'">
