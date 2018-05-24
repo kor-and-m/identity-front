@@ -9,6 +9,7 @@ import { iScope } from '../../share/interfaces/scope';
 export class ScopeCardComponent implements OnInit {
 
   @Input() scope: iScope;
+  @Input() hide_description: boolean = true;
 
   constructor() { }
 
