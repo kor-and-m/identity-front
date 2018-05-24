@@ -17,6 +17,16 @@ export class ScopeService {
 
   constructor(private http: Http, private cookieService: CookieService, private store: Store<State>) {}
 
+  public create_scope(scope: iScope): void {
+    const body: string = JSON.stringify(scope);
+    this.http.get('/api/scopes/', body)
+                    .map(response => response.json() as iScope)
+                    .subscribe(
+                      (scope) => this.store.dispatch(new scopeActions.Load(scope)),
+                      (err) => console.error(err)
+                    );
+  }
+
   public get_scopes(): Observable<iScope[]> {
     return this.get_scopes_from_store().mergeMap(
       (scopes: iScope[]) => {
