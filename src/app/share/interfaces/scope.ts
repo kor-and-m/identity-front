@@ -9,7 +9,7 @@ interface iScopeStyles {
 export interface iScope {
   styles?: iScopeStyles,
   author?: iUser,
-  name?: string,
+  name?: number,
   title: string,
   description?: string,
   back_url: string,

@@ -46,6 +46,21 @@ export class ScopeService {
     );
   }
 
+  public get_scope(name: number): Observable<iScope> {
+    return this.get_scopes_from_store().mergeMap(
+      (scopes: iScope[]) => {
+        if (scopes === null) {
+          this.store.dispatch(new scopeActions.Init([]));
+          return this.get_scopes_from_server().map((scopes) => {
+            this.store.dispatch(new scopeActions.Init(scopes));
+            return scopes.find((scope) => scope.name === name);
+          });
+        }
+        return Observable.of(scopes.find((scope) => scope.name === name));
+      }
+    );
+  }
+
   private get_scopes_from_store(): Observable<iScope[]> {
     return this.store.select('scopes');
   }
