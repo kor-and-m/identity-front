@@ -8,7 +8,8 @@ import {
   MatButtonModule,
   MatBadgeModule,
   MatTabsModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatInputModule,
 } from '@angular/material';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -48,6 +49,7 @@ import { EditorModule } from 'primeng/editor';
     MatTabsModule,
     EditorModule,
     MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [UserService, AuthGuard, ScopeService],
 })
