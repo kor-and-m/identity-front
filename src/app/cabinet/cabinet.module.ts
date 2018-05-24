@@ -19,6 +19,7 @@ import { AboutApiComponent } from './about-api/about-api.component';
 import { ScopeCardComponent } from './scope-card/scope-card.component';
 import { UbdateScopeComponent } from './ubdate-scope/ubdate-scope.component';
 import { EditorModule } from 'primeng/editor';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { EditorModule } from 'primeng/editor';
     MatBadgeModule,
     MatTabsModule,
     EditorModule,
+    InputTextModule,
   ],
   providers: [UserService, AuthGuard, ScopeService],
 })
