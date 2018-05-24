@@ -20,17 +20,22 @@ export class UbdateScopeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.reset_scope();
+  	this.route.data.subscribe((data) => this.action = data['action']);
+  }
+
+  private reset_scope() {
     this.scope = {
       title: '',
       description: '',
       back_url: '',
     };
-  	this.route.data.subscribe((data) => this.action = data['action']);
   }
 
   public onSubmit() {
     if (this.action === 'create') {
       this.scopeService.create_scope(this.scope);
+      this.reset_scope();
     }
     console.log(this.scope);
   }
