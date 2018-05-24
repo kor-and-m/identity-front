@@ -2,7 +2,13 @@
   <mat-tab-group>
     <mat-tab label="Редактирование" *ngIf="action !== 'watch'">
       <form>
-        <div class="ui-g-12 ui-md-4">
+        <div class="ui-g-12 ui-md-6">
+          <div class="ui-inputgroup">
+            <input type="text" pInputText placeholder="Название приложения"
+            [(ngModel)]="scope.title" name="title">      
+          </div>
+        </div>
+        <div class="ui-g-12 ui-md-6">
           <div class="ui-inputgroup">
             <span class="ui-inputgroup-addon">http://</span>
             <input type="text" pInputText placeholder="Адрес обратного вызова"
