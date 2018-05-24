@@ -29,9 +29,7 @@
             "styles": [
               "src/styles.sass"
             ],
-            "scripts": [
-              "./node_modules/quill/dist/quill.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
