@@ -3,7 +3,13 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MatCardModule, MatButtonModule, MatBadgeModule, MatTabsModule } from '@angular/material';
+import {
+  MatCardModule,
+  MatButtonModule,
+  MatBadgeModule,
+  MatTabsModule,
+  MatFormFieldModule
+} from '@angular/material';
 import { CookieService } from 'ngx-cookie-service';
 
 import { AuthGuard } from './../share/guards/auth.guard';
@@ -19,7 +25,6 @@ import { AboutApiComponent } from './about-api/about-api.component';
 import { ScopeCardComponent } from './scope-card/scope-card.component';
 import { UbdateScopeComponent } from './ubdate-scope/ubdate-scope.component';
 import { EditorModule } from 'primeng/editor';
-import { InputTextModule } from 'primeng/inputtext';
 
 
 @NgModule({
@@ -42,7 +47,7 @@ import { InputTextModule } from 'primeng/inputtext';
     MatBadgeModule,
     MatTabsModule,
     EditorModule,
-    InputTextModule,
+    MatFormFieldModule,
   ],
   providers: [UserService, AuthGuard, ScopeService],
 })
