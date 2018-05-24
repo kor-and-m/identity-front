@@ -5,10 +5,13 @@
         <div class="ui-g-12 ui-md-4">
           <div class="ui-inputgroup">
             <span class="ui-inputgroup-addon">http://</span>
-            <input type="text" pInputText placeholder="Адрес обратного вызова">      
+            <input type="text" pInputText placeholder="Адрес обратного вызова"
+            [(ngModel)]="scope.back_url" name="back_url">      
           </div>
         </div>
-        <p-editor [(ngModel)]="scope.description" [style]="{'height':'320px'}"></p-editor>
+        <div>
+          <p-editor [(ngModel)]="scope.description" [style]="{'height':'320px'}" name="editor"></p-editor>
+        </div>
       </form>
     </mat-tab>
     <mat-tab label="Просмотр" *ngIf="action !== 'create'">	
