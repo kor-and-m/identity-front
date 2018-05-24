@@ -1,20 +1,13 @@
 <div class="container scope-form">
   <mat-tab-group>
     <mat-tab label="Редактирование" *ngIf="action !== 'watch'">
-      <form>
-        <div class="ui-g-12 ui-md-6">
-          <div class="ui-inputgroup">
-            <input type="text" pInputText placeholder="Название приложения"
-            [(ngModel)]="scope.title" name="title">      
-          </div>
-        </div>
-        <div class="ui-g-12 ui-md-6">
-          <div class="ui-inputgroup">
-            <span class="ui-inputgroup-addon">http://</span>
-            <input type="text" pInputText placeholder="Адрес обратного вызова"
-            [(ngModel)]="scope.back_url" name="back_url">      
-          </div>
-        </div>
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <mat-form-field class="form-input">
+          <input matInput placeholder="Название приложения" name="title" [(ngModel)]="scope.title">
+        </mat-form-field>
+        <mat-form-field class="form-input">
+          <input matInput placeholder="Адрес авторизации" name="back_url" [(ngModel)]="scope.back_url">
+        </mat-form-field>
         <div>
           <p-editor [(ngModel)]="scope.description" [style]="{'height':'320px'}" name="editor"></p-editor>
         </div>

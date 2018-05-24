@@ -16,16 +16,19 @@ export class UbdateScopeComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {
   	this.action = 'create';
-  	this.scope = {
-  	  title: '',
-  	  description: '',
-  	  back_url: '',
-  	  icon: '',
-  	};
   }
 
   ngOnInit() {
+    this.scope = {
+      title: '',
+      description: '',
+      back_url: '',
+    };
   	this.route.data.subscribe((data) => this.action = data['action']);
+  }
+
+  public onSubmit() {
+    console.log(this.scope);
   }
 
 }
