@@ -1,9 +1,9 @@
 <div class="container scope-form">
   <mat-tab-group>
-    <mat-tab label="Просмотр" *ngIf="action !== 'create'">
+    <mat-tab label="Просмотр" *ngIf="action !== 'create' && scope">
       <app-scope-card [scope]="scope" [hide_description]=false></app-scope-card>
     </mat-tab>
-    <mat-tab label="Редактирование" *ngIf="action !== 'watch'">
+    <mat-tab label="Редактирование" *ngIf="action !== 'watch' && scope">
       <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
         <mat-form-field class="form-input">
           <input matInput placeholder="Название приложения" name="title" [(ngModel)]="scope.title">
