@@ -6,7 +6,7 @@
   </mat-card-content>
   <img mat-card-image [src]="scope?.icon || 'assets/apps/default.png'">
   <div class="button-row">
-    <a mat-fab [routerLink]="scope.name" color="primary">Инфо</a>
+    <a mat-fab [routerLink]="scope?.name" color="primary">Инфо</a>
     <a mat-fab color="primary" class="enter-button"
     [attr.href]="'/api/auth/set-token/?scope_name='+scope.name">Войти</a>
   </div>
