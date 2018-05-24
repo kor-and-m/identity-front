@@ -1,7 +1,15 @@
 <div class="container scope-form">
   <mat-tab-group>
     <mat-tab label="Редактирование" *ngIf="action !== 'watch'">
+      <form>
+        <div class="ui-g-12 ui-md-4">
+          <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon">http://</span>
+            <input type="text" pInputText placeholder="Адрес обратного вызова">      
+          </div>
+        </div>
         <p-editor [(ngModel)]="scope.description" [style]="{'height':'320px'}"></p-editor>
+      </form>
     </mat-tab>
     <mat-tab label="Просмотр" *ngIf="action !== 'create'">	
     </mat-tab>
