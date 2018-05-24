@@ -53,10 +53,14 @@ export class ScopeService {
           this.store.dispatch(new scopeActions.Init([]));
           return this.get_scopes_from_server().map((scopes) => {
             this.store.dispatch(new scopeActions.Init(scopes));
-            return scopes.find((scope) => scope.name === name);
+            const scope: iScope = scopes.find((scope) => scope.name === name);
+            console.log(scope, 1);
+            return scope;
           });
         }
-        return Observable.of(scopes.find((scope) => scope.name === name));
+        const scope: iScope = scopes.find((scope) => scope.name === name);
+        console.log(scope, 2);
+        return Observable.of(scope);
       }
     );
   }
