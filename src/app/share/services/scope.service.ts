@@ -19,7 +19,7 @@ export class ScopeService {
 
   public create_scope(scope: iScope): void {
     const body: string = JSON.stringify(scope);
-    this.http.get('/api/scopes/', body)
+    this.http.post('/api/scopes/', body)
                     .map(response => response.json() as iScope)
                     .subscribe(
                       (scope) => this.store.dispatch(new scopeActions.Load(scope)),
