@@ -26,6 +26,7 @@ import { AboutApiComponent } from './about-api/about-api.component';
 import { ScopeCardComponent } from './scope-card/scope-card.component';
 import { UbdateScopeComponent } from './ubdate-scope/ubdate-scope.component';
 import { EditorModule } from 'primeng/editor';
+import { FileUploadModule } from 'primeng/fileupload';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { EditorModule } from 'primeng/editor';
     EditorModule,
     MatFormFieldModule,
     MatInputModule,
+    FileUploadModule,
   ],
   providers: [UserService, AuthGuard, ScopeService],
 })

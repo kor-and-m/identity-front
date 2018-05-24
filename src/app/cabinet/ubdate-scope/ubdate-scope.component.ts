@@ -31,11 +31,16 @@ export class UbdateScopeComponent implements OnInit {
     });
   }
 
+  public myUploader(files: FileList) {
+    console.log(files);
+  }
+
   private reset_scope() {
     this.scope = {
       title: '',
       description: '',
       back_url: '',
+      icon: ','
     };
   }
 

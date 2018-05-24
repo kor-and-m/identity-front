@@ -13,6 +13,6 @@ export interface iScope {
   title: string,
   description?: string,
   back_url: string,
-  icon?: string,
+  icon?: string | File,
   secret?: string,
 }
