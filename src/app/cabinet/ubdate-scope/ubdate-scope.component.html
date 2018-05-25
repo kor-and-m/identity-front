@@ -15,8 +15,9 @@
           <p-editor [placeholder]="'Описание приложения'" [(ngModel)]="scope.description" 
           [style]="{'height':'320px'}" name="editor"></p-editor>
         </div>
-        <p-fileUpload name="myfile[]" customUpload="true" (uploadHandler)="myUploader($event.files)"
-        accept="image/*" maxFileSize="1000000"></p-fileUpload>
+        <p-fileUpload mode="basic" auto="true" name="myfile[]" customUpload="true"
+        (uploadHandler)="myUploader($event.files)"
+        accept="image/*" maxFileSize="1000000" #fubauto></p-fileUpload>
         <button mat-raised-button color="primary" type="submit">Отправить</button>
       </form>
     </mat-tab>
