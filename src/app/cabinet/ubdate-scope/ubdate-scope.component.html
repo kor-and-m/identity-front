@@ -16,7 +16,7 @@
           [style]="{'height':'320px'}" name="editor"></p-editor>
         </div>
         <p-fileUpload auto="true" name="myfile[]" customUpload="true"
-        (uploadHandler)="myUploader($event.files)"
+        (uploadHandler)="myUploader($event.files)" chooseLabel="Иконка приложения"
         accept="image/*" maxFileSize="1000000" #fubauto></p-fileUpload>
         <button mat-raised-button color="primary" type="submit">Отправить</button>
       </form>
