@@ -18,12 +18,11 @@ export class ScopeService {
   constructor(private http: Http, private cookieService: CookieService, private store: Store<State>) {}
 
   public create_scope(scope: iScope): void {
-    const headers = new Headers({
-     'Content-Type': 'application/json',
-    });
-    const options = new RequestOptions({ headers: headers, withCredentials: true });
-    const body: string = JSON.stringify(scope);
-    this.http.post('/api/scopes/', body, options)
+    let formData = new FormData();
+    for (let key in scope) {
+      formData.append(key, scope[key]);
+    }
+    this.http.post('/api/scopes/', formData)
                     .map(response => response.json() as iScope)
                     .subscribe(
                       (scope) => this.store.dispatch(new scopeActions.Load(scope)),

@@ -31,8 +31,8 @@ export class UbdateScopeComponent implements OnInit {
     });
   }
 
-  public myUploader(files: FileList) {
-    console.log(files);
+  public myUploader(files: File[]) {
+    this.scope.icon = files[0];
   }
 
   private reset_scope() {
