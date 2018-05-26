@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { iScope } from '../../share/interfaces/scope';
 import { ScopeService } from './../../share/services/scope.service';
@@ -15,7 +15,7 @@ export class UbdateScopeComponent implements OnInit {
   public action: 'create' | 'update' | 'watch';
   public scope: iScope;
 
-  constructor(private route: ActivatedRoute, private scopeService: ScopeService,) {
+  constructor(private route: ActivatedRoute, private router: Router, private scopeService: ScopeService,) {
   	this.action = 'create';
   }
 
@@ -45,10 +45,10 @@ export class UbdateScopeComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log(this.scope);
     if (this.action === 'create') {
       this.scopeService.create_scope(this.scope);
       this.reset_scope();
+      this.router.navigate(['/apps/management']);
     }
   }
 
