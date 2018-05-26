@@ -10,6 +10,7 @@ import {
   MatTabsModule,
   MatFormFieldModule,
   MatInputModule,
+  MatStepperModule,
 } from '@angular/material';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -52,6 +53,7 @@ import { FileUploadModule } from 'primeng/fileupload';
     MatFormFieldModule,
     MatInputModule,
     FileUploadModule,
+    MatStepperModule,
   ],
   providers: [UserService, AuthGuard, ScopeService],
 })

@@ -1,3 +1,11 @@
-<p>
-  about works!
-</p>
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step>
+    <ng-template matStepLabel>Создайте приложение</ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Настройте своё приложение</ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Профит</ng-template>
+  </mat-step>
+</mat-horizontal-stepper>

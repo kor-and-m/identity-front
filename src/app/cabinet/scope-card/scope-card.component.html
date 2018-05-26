@@ -4,7 +4,7 @@
   <mat-card-content *ngIf="!hide_description && scope?.description">
     <div [innerHTML]="scope.description"></div>
   </mat-card-content>
-  <img mat-card-image [src]="scope?.icon || 'assets/apps/default.png'" height="250p">
+  <img mat-card-image [src]="scope?.icon || 'assets/apps/default.png'" height="250px">
   <div *ngIf="hide_description" class="button-row">
     <a mat-fab [routerLink]="scope?.name" color="primary">Инфо</a>
     <a mat-fab color="primary" class="enter-button"
