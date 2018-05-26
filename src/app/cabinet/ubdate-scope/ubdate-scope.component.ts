@@ -45,11 +45,11 @@ export class UbdateScopeComponent implements OnInit {
   }
 
   public onSubmit() {
+    console.log(this.scope);
     if (this.action === 'create') {
       this.scopeService.create_scope(this.scope);
       this.reset_scope();
     }
-    console.log(this.scope);
   }
 
 }
