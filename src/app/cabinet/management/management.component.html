@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-4 app-container" [routerLink]="['/apps', 'create']">
+    <!-- <div class="col-4 app-container" [routerLink]="['/apps', 'create']">
       <mat-card>
         <mat-card-title>Создать приложение</mat-card-title>
         <img mat-card-image src="assets/apps/add.png" height="250px">
       </mat-card>
-    </div>
+    </div> -->
     <ng-template ngFor let-scope [ngForOf]="scopes">
       <div class="col-4 app-container">
         <app-scope-card [scope]="scope"></app-scope-card>
